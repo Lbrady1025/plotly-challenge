@@ -10,3 +10,18 @@ function readJSON(id) {
     // console.log(labels);
 
 };
+
+function init() {
+    var dropdown = d3.select("#selDataset");
+
+    d3.json("../samples.json").then( function(data) {
+        console.log(data);
+
+        data.names.forEach( function (name) {
+            dropdown.append("option").text(name).property("value");
+    });
+    });
+
+};
+
+init();
