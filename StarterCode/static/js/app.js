@@ -75,4 +75,9 @@ function init() {
 
 };
 
+function optionChanged(newSample) {
+    readJSON(newSample);
+    addCharts(newSample);
+};
+
 init();
